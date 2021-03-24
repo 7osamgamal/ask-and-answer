@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/gameStart">
+
+    <fragment
+        android:id="@+id/gameStart"
+        android:name="com.hosam.askanswer.GameStart"
+        android:label="fragment_game_start"
+        tools:layout="@layout/fragment_game_start" >
+        <action
+            android:id="@+id/action_gameStart_to_fragmentLose"
+            app:destination="@id/fragmentLose" />
+        <action
+            android:id="@+id/action_gameStart_to_fragmentWon"
+            app:destination="@id/fragmentWon" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLose"
+        android:name="com.hosam.askanswer.FragmentLose"
+        android:label="fragment_lose"
+        tools:layout="@layout/fragment_lose" />
+    <fragment
+        android:id="@+id/fragmentWon"
+        android:name="com.hosam.askanswer.FragmentWon"
+        android:label="fragment_won"
+        tools:layout="@layout/fragment_won" />
+</navigation>
